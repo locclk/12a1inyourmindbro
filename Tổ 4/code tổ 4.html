@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổ 4</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Banner Section */
+        .banner {
+            background: url('https://postimg.cc/p981fZvh' target='_blank'><img src='https://i.postimg.cc/p981fZvh/IMG-20241115-161138.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 12rem 1rem;
+            text-align: center;
+            color: darkred;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* Members Section */
+        .members {
+            background-color: #FF9999;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        /* Member Card */
+        .block_member {
+            flex: 1 1 22%;
+            max-width: 22%;
+            background-color: #f4f4f4;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .block_member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        h3 {
+            color: #d9534f;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        h3 a {
+            text-decoration: none;
+            color: #d9534f;
+            transition: color 0.3s;
+        }
+
+        h3 a:hover {
+            color: #a94442;
+        }
+
+        p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .block_member {
+                flex: 1 1 45%; /* Hai cột */
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .block_member {
+                flex: 1 1 100%; /* Một cột */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner Section -->
+    <div class="banner">
+        <h2>Tổ 4</h2>
+    </div>
+
+    <!-- Members Section -->
+    <section class="members">
+        <h2>Danh sách thành viên</h2>
+        <div class="row">
+            <!-- Member 1 -->
+            <div class="block_member"><a href='https://postimg.cc/fkkV57G2' target='_blank'>
+                    <img src='https://i.postimg.cc/fkkV57G2/IMG-20240401-141520.jpg' border='0' alt='IMG-20240401-141520'/>
+                </a>
+                <h3><a href="toanakanora.html" target="_blank">Trần Hoàng Phúc Toàn</a></h3>
+                <p>Vai trò: Tổ trưởng</p>
+            </div>
+            <!-- Member 2 -->
+            <div class="block_member">
+                <a href='https://postimg.cc/0zv2g74q' target='_blank'>
+                  <a href='https://postimg.cc/5XCBDwdq' target='_blank'><img src='https://i.postimg.cc/5XCBDwdq/IMG-20240520-201741.jpg' border='0' alt='IMG-20240520-201741'/></a>
+                </a>
+                <h3><a href="Lâm Nhật Cường .html" target="_blank">Lâm Nhật Cường</a></h3>
+                <p>Vai trò: Tổ phó</p>
+            </div>
+            <!-- Member 3 -->
+            <div class="block_member">
+               <a href='https://postimg.cc/njXnK2Xq' target='_blank'><img src='https://i.postimg.cc/njXnK2Xq/thumb-Screenshot-20240226-144735.jpg' border='0' alt='thumb-Screenshot-20240226-144735'/></a>
+                <h3><a href="toilaheo.html" target="_blank">Trần Thị Ngọc Chăm</a></h3>
+                <p>Vai trò: Bí thư</p>
+            </div>
+            <!-- Member 4 -->
+            <div class="block_member">
+               <a href='https://postimg.cc/Mnp7W85X' target='_blank'><img src='https://i.postimg.cc/Mnp7W85X/IMG-20241220-073354.jpg' border='0' alt='IMG-20241220-073354'/></a>
+                <h3><a href="Lâm Trương Công Tân  12A1 (1)  .html" target="_blank">Lâm Trương Công Tân</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div>
+            <!-- Member 5 -->
+            <div class="block_member">
+                <a href='https://postimg.cc/dhYfnDJp' target='_blank'><img src='https://i.postimg.cc/dhYfnDJp/IMG-20241220-073346.jpg' border='0' alt='IMG-20241220-073346'/></a>
+                <h3><a href="Thinh12A1.html" target="_blank">Nguyễn Lâm Minh Thịnh</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div>
+            <!-- Member 6 -->
+            <div class="block_member">
+                <a href='https://postimg.cc/xkj4D7JP' target='_blank'><img src='https://i.postimg.cc/xkj4D7JP/IMG-20241220-073444.jpg' border='0' alt='IMG-20241220-073444'/></a>
+                <h3><a href="Duongtanphat .html" target="_blank">Dương Tấn Phát</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div>
+            <!-- Member 7 -->
+            <div class="block_member">
+                <a href='https://postimg.cc/8J9Kvzyy' target='_blank'><img src='https://i.postimg.cc/8J9Kvzyy/IMG-20241220-073828.jpg' border='0' alt='IMG-20241220-073828'/></a>
+                <h3><a href="nguyenchitantieusu.html" target="_blank">Nguyễn Chí Tân</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div><!-- Member 8 -->
+            <div class="block_member">
+                <a href='https://postimg.cc/SjYthcsH' target='_blank'><img src='https://i.postimg.cc/SjYthcsH/IMG-20241220-073926.jpg' border='0' alt='IMG-20241220-073926'/></a>
+                <h3><a href="Huỳnh Như Ý.html" target="_blank">Huỳnh Như Ý</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div>
+            <!-- Member 9 -->
+            <div class="block_member">
+                <a href='https://postimg.cc/nsL0wDgR' target='_blank'><img src='https://i.postimg.cc/nsL0wDgR/IMG-20241220-073350.jpg' border='0' alt='IMG-20241220-073350'/></a>
+                <h3><a href="Nguyễn Thị Ngọc Ý (1).html" target="_blank">Nguyên Thị Ngọc Ý</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div>
+            <!-- Member 10 -->
+            <div class="block_member">
+               <a href='https://postimg.cc/kBdwPZLt' target='_blank'><img src='https://i.postimg.cc/kBdwPZLt/IMG-20241220-074329.jpg' border='0' alt='IMG-20241220-074329'/></a>
+                <h3><a href="Trần Khánh Đoan.html" target="_blank">Trần Khánh Đoan</a></h3>
+                <p>Vai trò: Thành viên</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

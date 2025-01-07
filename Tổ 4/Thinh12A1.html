@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Lâm Minh Thịnh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #97FFFF;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .left,
+    .right {
+      padding: 20px;
+    }
+
+    .left {
+      width: 35%;
+      background-color: #97FFFF;
+      border-right: 1px #FFA500;
+      text-align: center;
+    }
+
+    .right {
+      width: 65%;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #00EE00;
+    }
+
+    .profile h1 {
+      font-size: 2em;
+      color: #FF0033;
+      margin: 0.5em 0;
+    }
+
+    .profile p {
+      color: #CC9933;
+      margin: 10px 0;
+    }
+
+    .timeline h2 {
+      font-weight: bold;
+      color: #FF6666;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    .event {
+      border-left: 4px solid #c84e58;
+      padding-left: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 10px;
+      width: 14px;
+      height: 14px;
+      background-color: #c84e58;
+      border-radius: 50%;
+    }
+
+    .event h3 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .event.lop10 h3 {
+      color: #FF4500; /* Màu cam đậm */
+    }
+
+    .event.lop11 h3 {
+      color: #1E90FF; /* Màu xanh dương */
+    }
+
+    .event.lop12 h3 {
+      color: #8A2BE2; /* Màu tím */
+    }
+
+    .event ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .event li {
+      color: #a74049;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Bên trái: Thông tin cá nhân -->
+    <div class="left">
+      <div class="profile">
+        <a href='https://postimg.cc/PC6h1Y3J' target='_blank'><img src='https://i.postimg.cc/PC6h1Y3J/20241204-092055.jpg' border='0' alt='20241204-092055'/></a>
+        <h1>Nguyễn Lâm Minh Thịnh</h1>
+        <p><i>Ngày sinh: 20/06/2007</i></p>
+        <p><i>Email: minhthinh123.st@gmail.com</i></p>
+        <p><i>Điện thoại: 0888624482</i></p>
+        <p><i>Địa chỉ: khóm 1, Phường 1, thị xã Ngã Năm, tỉnh Sóc Trăng</i></p>
+      </div>
+    </div>
+
+    <!-- Bên phải: Các sự kiện quan trọng -->
+    <div class="right">
+      <div class="timeline">
+        <h2>Sự Kiện</h2>
+
+        <div class="event lop10">
+          <h3>Lớp 10 (Năm học 2022-2023)</h3>
+          <ul>
+            <li>Tôi là học sinh lớp 10A1, thuộc tổ 4, có một cuộc sống khá trầm lặng cho tới khi bình chọn mua áo lớp thì tôi có một cuộc tranh cãi nhỏ nhưng tôi vẫn quyết định mua áo lớp và đấy là 1 quyết định sáng suốt nhất của tôi.</li>
+          </ul>
+        </div>
+
+        <div class="event lop11">
+          <h3>Lớp 11 (Năm học 2023-2024)</h3>
+          <ul>
+            <li>Tôi là học sinh lớp 11A1, vẫn thuộc tổ 4, vẫn có một cuộc sống khá trầm lặng nhưng khá vui và đạt được nhiều thành tích tốt.</li>
+          </ul>
+        </div>
+
+        <div class="event lop12">
+          <h3>Lớp 12 (Năm học 2024-2025)</h3>
+          <ul>
+            <li>Tôi là học sinh lớp 12A1, vẫn thuộc tổ 4, nhưng lại ngồi kế thùng rác. Khác với mọi năm, tôi đã đi học thêm nhiều môn và học nhiều hơn nhưng tôi hơi buồn vì một số thành viên đã chuyển lớp.</li>
+          </ul>
+        </div>
+      </div>
+<p><a href="code tổ 4.html">Trở lại trang chủ</a></p>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <title> PHẠM LÊ MINH THƯ </title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #d7ebfe;         /*nền phải*/
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .left,
+    .right {
+      padding: 20px;
+    }
+
+    .left {
+      width: 35%;
+      background-color: #d0e6ff;    /*nền phải*/
+      border-right: 1px solid #9fcaf5;
+      text-align: center;
+    }
+
+    .right {
+      width: 65%;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #e1ccd4;
+    }
+
+    .profile h1 {
+        font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      color: red; /*Chữ PHẠM LÊ MINH THƯ*/
+      text-shadow: -0.15px -0.15px 0 #ef7f89,
+      0.15px -0.15px 0 #fa135c,
+      -0.15px 0.15px 0 #fa135c,
+      0.15px 0.15px 0 #fa135c;
+      margin: 0.25;
+    }
+
+    .profile p {
+      color: #a74049;
+      margin: 10px 0.1em;
+    }
+
+    .timeline h2 {
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+      color: #ef7f89;
+      text-shadow: -1px -1px 0 #ef7f89,
+      1px -1px 0 #fa135c,
+      -1px 1px 0 #fa135c,
+      1px 1px 0 #fa135c;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 4em;
+    }
+
+    .event {
+      border-left: 4px solid #c84e58;
+      padding-left: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 10px;
+      width: 14px;
+      height: 14px;
+      background-color: #c84e58;
+      border-radius: 50%;
+    }
+
+    .event h3 {
+      font-size: 1.5em;
+      color: blue;
+      margin: 0;
+    }
+
+    .event li {
+      color: black;
+      margin: 5px 0;
+    }
+     .event h4 {
+      font-size: 1.5em;
+      color: red;
+      margin: 0;
+    }
+     .event h5 {
+      font-size: 1.5em;
+      color: purple;
+      margin: 0;
+    }
+        /* Nút trở lại trang chủ */
+        .back-home {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #559dd8; /* Màu tím đẹp */
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-home:hover {
+      background-color: #4891f0;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .back-home:active {
+      background-color: #61a0f1;
+      transform: translateY(2px);
+    }
+
+    /* Canh chỉnh nút dưới cùng */
+    .back-home-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Bên trái: Thông tin cá nhân -->
+    <div class="left">
+      <div class="profile">
+        <a href='https://postimg.cc/hfp3yF1Y' target='_blank'><img src='https://i.postimg.cc/PrqFH2vw/retouch-2023092900001379.jpg' border='0' alt='Ảnh cá nhân'/></a>
+        <h1>Phạm Lê Minh Thư</h1>
+        <p><i>Ngày sinh:</i> 19/11/2007</p>
+        <p><i>Email:</i> phamleminhthu191107@gmail.com</p>
+        <p><i>Điện thoại:</i> 0941 863 410</p>
+        <p><i>Địa chỉ:</i> Khóm Tân Phú, Phường 2, thị xã Ngã Năm, tỉnh Sóc Trăng</p>
+      </div>
+    </div>
+
+    <!-- Bên phải: Các sự kiện quan trọng -->
+    <div class="right">
+      <div class="timeline">
+        <h2>Nhật kí cá nhân</h2>
+
+        <div class="event">
+          <h3>Lớp 10 (Năm học 2022-2023)</h3>
+           
+   
+        <ul>
+<li> Bước vào ngôi trường mới với sự hồi hộp và hào hứng, em cảm nhận được không khí trong lành và thân thiện từ sân trường rộng lớn và dãy phòng học khang trang.</li>
+<li> Gặp lại bạn cũ và làm quen với nhiều bạn mới, em cảm thấy mình đang bắt đầu một hành trình đầy mới mẻ và thú vị.</li>
+<li> Buổi lễ kỷ niệm ngày Nhà giáo Việt Nam 20/11, lớp em đã cùng nhau chuẩn bị những tấm thiệp để tri ân thầy cô.</li>
+                    </tr>
+           
+              </div>
+
+        <div class="event">
+          <h4>Lớp 11 (Năm học 2023-2024)</h4>
+          <ul>
+            <li>Ngày cắm trại tại trường THPT Mai Thanh Thế thật sự là một trải nghiệm đầy thú vị và đáng nhớ.</li>
+            <li>Các hoạt động bắt đầu với việc dựng trại ngay tại khuôn viên sân trường.</li>
+            <li>Buổi tối, chúng em quây quần bên nhau quanh lửa trại, cùng hát hò và thưởng thức những món ăn tự chuẩn bị. Những câu chuyện kể về thầy cô, bạn bè và những kỷ niệm tuổi học trò làm cho chúng em thêm gắn kết và hiểu nhau hơn.</li>
+          </ul>
+         
+        </div>
+
+        <div class="event">
+          <h5>Lớp 12 (Năm học 2024-2025)</h5>
+          <ul>
+            <li>Năm lớp 12 thực sự là một năm học đầy cảm xúc, nhưng cũng không tránh khỏi những nuối tiếc.</li>
+            <li>Một trong những kỷ niệm khiến em cảm thấy tiếc nuối nhất là khi nghe tin trường sẽ không tổ chức cắm trại năm nay</li>
+            <li>Dù không thể cắm trại, chúng em vẫn cố gắng tạo ra những kỷ niệm đẹp khác bằng cách tổ chức các hoạt động nhóm nhỏ trong lớp.</li>
+            <li> Dù không thể so sánh với những gì chúng em mong đợi từ ngày cắm trại, những trải nghiệm này vẫn đầy ý nghĩa và đáng trân trọng.</li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Nút Trở lại trang chủ -->
+<div class="back-home-container">
+  <a href="GR1.html" class="back-home">Trở lại trang chủ</a>
+
+
+</body>
+
+</html>

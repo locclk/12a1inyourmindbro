@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Tấn Nguyên</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Ingrid+Darling&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #8f1212;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .left,
+    .right {
+      padding: 20px;
+    }
+
+    .left {
+      width: 35%;
+      background-color:#FAFAD2;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .right {
+      width: 65%;
+      background-color: #ffffff;
+    }
+
+    .profile {
+      position: relative;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 5px solid #8f1212; 
+    }
+
+    .profile h1 {
+      font-family: 'Ingrid Darling', cursive;
+      font-size: 4em;
+      color: #b81c00;
+      margin: 0.25;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff; 
+    }
+
+    .profile p {
+      color: #352f2f; 
+      font-size: 1.1em;
+      margin: 10px 0.1em;
+    }
+
+    .timeline h2 {
+      font-family: 'Ingrid Darling', cursive;
+      font-weight: bold;
+      color: #812122;
+      text-shadow: -1px -1px 0 #3b0005,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 5em; 
+    }
+
+    .event {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 50px;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: inherit;
+    }
+
+    .event .dot {
+      position: absolute;
+      left: -12px;
+      top: 10px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%; 
+    }
+
+    .event h3 {
+      font-size: 1.5em;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .event h3.blue {
+      color: #0a4268;
+    }
+
+    .event h3.red {
+      color: #6b0d0d;
+    }
+
+    .event h3.purple {
+      color: #2e0e3a;
+    }
+
+    .event li {
+      color: #000000; 
+      margin: 5px 0;
+    }
+
+    .event.blue::before {
+      background-color: #0a4268;
+    }
+
+    .event.red::before {
+      background-color: #6b0d0d;
+    }
+
+    .event.purple::before {
+      background-color: #2e0e3a;
+    }
+
+    /* Đổi màu các dot */
+    .event.blue .dot {
+      background-color: #0a4268; 
+    }
+
+    .event.red .dot {
+      background-color: #6b0d0d; 
+    }
+
+    .event.purple .dot {
+      background-color: #2e0e3a; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="profile">
+        <a href='https://postimg.cc/cgss0kZc' target='_blank'><img src='https://i.postimg.cc/Y9FjNTsT/z6155199966834-d4401cdc8f76f1727f23c1e25da2fc58.jpg' border='0' alt='Ảnh cá nhân'/></a>
+        <h1>Nguyễn Tấn Nguyên</h1>
+        <p><i>Ngày sinh:</i> 26/09/2007</p>
+        <p><i>Email:</i> towfnger2697@gmail.com </p>
+        <p><i>Điện thoại:</i> 0856151908 </p>
+        <p><i>Địa chỉ:</i> Phường 3, thị xã Ngã Năm, tỉnh Sóc Trăng</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="timeline">
+        <h2>Nhật kí A1</h2>
+
+        <div class="event blue">
+          <div class="dot"></div>
+          <h3 class="blue">Lớp 10 (Năm học 2022-2023)</h3>
+          <ul>
+            <li>Thi đậu tuyển sinh 10.</li>
+            <li>Là học sinh lớp 10A1.</li>
+            <li>Là thành viên của tổ 3.</li>
+            <li>Đạt danh hiệu học sinh xuất sắc</li>
+            <li>Năm lớp 10 trọn vẹn, không vui lắm.</li>
+          </ul>
+        </div>
+
+        <div class="event red">
+          <div class="dot"></div>
+          <h3 class="red">Lớp 11 (Năm học 2023-2024)</h3>
+          <ul>
+            <li>Là học sinh lớp 11A1.</li>
+            <li>Tiếp tục là thành viên tổ 3.</li>
+            <li>Đạt danh hiệu học sinh xuất sắc</li>
+            <li>Đầu năm bất ổn nhưng cuối năm vẫn không ổn.</li>
+          </ul>
+        </div>
+
+        <div class="event purple">
+          <div class="dot"></div>
+          <h3 class="purple">Lớp 12 (Năm học 2024-2025)</h3>
+          <ul>
+            <li>Là học sinh lớp 12A1.</li>
+            <li>Vẫn tiếp tục là thành viên tổ 3.</li>
+            <li>Chưa có định hướng cụ thể nhưng không sao vì tui là chill guy</li>
+            <li>Hi vọng sẽ có nhiều kỷ niệm vui vẻ và đáng nhớ.</li>
+          </ul>
+        </div>
+      </div>
+ <p><a href="website tổ 3.html">Trở lại trang chủ</a></p>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyễn Trường Thịnh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #d7ebfe;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .left,
+    .right {
+      padding: 20px;
+    }
+
+    .left {
+      width: 35%;
+      background-color: #528B8B;
+      border-right: 1px solid #9fcaf5;
+      text-align: center;
+    }
+
+    .right {
+      width: 65%;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #e1ccd4;
+    }
+
+    .profile h1 {
+      font-size: 2em;
+      color: #880000;
+      margin: 0.5em 0;
+    }
+
+    .profile p {
+      color: #a74049;
+      margin: 10px 0;
+    }
+
+    .timeline h2 {
+      font-weight: bold;
+      color: #ef7f89;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    .event {
+      border-left: 4px solid #c84e58;
+      padding-left: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 10px;
+      width: 14px;
+      height: 14px;
+      background-color: #c84e58;
+      border-radius: 50%;
+    }
+
+    .event h3 {
+      font-size: 1.5em;
+      color: #e46872;
+      margin: 0;
+    }
+
+    .event ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .event li {
+      color: #a74049;
+      margin: 5px 0;
+    }
+        /* Nút trở lại trang chủ */
+        .back-home {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #559dd8; /* Màu tím đẹp */
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-home:hover {
+      background-color: #4891f0;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .back-home:active {
+      background-color: #61a0f1;
+      transform: translateY(2px);
+    }
+
+    /* Canh chỉnh nút dưới cùng */
+    .back-home-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Bên trái: Thông tin cá nhân -->
+    <div class="left">
+      <div class="profile">
+        <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/NyQZ4Q0p/IMG-4340.jpg' border='0' alt='IMG-4340'/></a>
+        <h1>Nguyễn Trường Thịnh</h1>
+        <p><i>Ngày sinh:05/08/2007</i> </p>
+        <p><i>Email:thinhgfq@gmail.com</i> </p>
+        <p><i>Điện thoại:0339314339</i> </p>
+        <p><i>Địa chỉ:khóm 2, phường 1, thị xã Ngã Năm</i> </p>
+      </div>
+    </div>
+
+    <!-- Bên phải: Các sự kiện quan trọng -->
+    <div class="right">
+      <div class="timeline">
+        <h2>Sự Kiện</h2>
+
+        <div class="event">
+          <h3>Lớp 10 (Năm học 2022-2023)</h3>
+          <ul>
+            <td>Lớp 10: tôi ở tổ 4</td>
+
+          </ul>
+        </div>
+
+        <div class="event">
+          <h3>Lớp 11 (Năm học 2023-2024)</h3>
+          <ul>
+            <td>Lớp 11: tôi tận hưởng cuộc sống vui vẻ ở tổ 4</td>
+          </ul>
+        </div>
+
+        <div class="event">
+          <h3>Lớp 12 (Năm học 2024-2025)</h3>
+          <ul>
+            <td>Lớp 12: tôi phản bội tổ 4 để đi tìm một cuộc sống mới, ở một bến đỗ mới, một phương trời mới, trong lòng tôi đôi lúc nhớ về mái nhà xưa
+            <br><strong>Ngẩn đầu nhìn trăng sáng, cuối đầu nhớ cố hương...</strong></br></td>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- Nút Trở lại trang chủ -->
+ <div class="back-home-container">
+  <a href="GR1.html" class="back-home">Trở lại trang chủ</a>
+
+</body>
+
+</html>

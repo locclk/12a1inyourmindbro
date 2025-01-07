@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GROUP ONE - 12A1</title>
+    
+    <style>
+
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #ffffff, #d4e8f7, #90caf9);
+    color: #444;
+    overflow-x: hidden;
+}
+
+
+
+
+#activities {
+    padding: 20px;
+    background-color: #f3f8ff; /* Màu nền pastel nhẹ nhàng */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+#activities h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #025feb; /* Màu chữ nổi bật */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.activity-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Cố định 4 ảnh mỗi hàng */
+    gap: 20px; /* Khoảng cách giữa các ảnh */
+}
+
+.activity-gallery figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    width: 200px; /* Kích thước khung cố định */
+    height: 200px; /* Kích thước khung cố định */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.activity-gallery figure:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+    box-shadow: 0 8px 15px rgba(118, 231, 137, 0.932);
+}
+
+.activity-gallery img {
+    width: 100%; /* Chiều rộng tự động khớp với khung */
+    height: 100%; /* Chiều cao tự động khớp với khung */
+    object-fit: cover; /* Lấp đầy khung mà không bị méo */
+    object-position: center; /* Ảnh được căn giữa trong khung */
+    display: block;
+    border-bottom: 2px solid #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.activity-gallery figcaption {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3695f3;
+    background-color: #ecf0f1; /* Nền chữ nổi bật */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-transform: capitalize;
+}
+
+/* Cải thiện thiết kế chú thích khi hover */
+figure:hover figcaption {
+    background-color: rgba(0, 0, 0, 0.8); /* Làm tối hơn khi hover */
+}
+
+/* Banner Section */
+.banner {
+    background: url("7e645fb947b686b38eb352f09af3c2fc.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 12rem 1rem;
+    text-align: center;
+    color: darkred;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.banner h2 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Members Section */
+.members {
+    background-color: #f8f9fa; /* Softer background color */
+    text-align: center;
+    padding: 3rem 2rem; /* Increase padding for better spacing */
+}
+
+.members h2 {
+    font-size: 2.5rem; /* Slightly larger font size */
+    margin-bottom: 2rem;
+    color: #007bff; /* More vibrant blue */
+    font-weight: bold;
+    text-transform: uppercase; /* Make the title stand out */
+}
+
+.member-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); Flexible column layout */
+    gap: 2rem; /* Increase gap for better spacing */
+    grid-template-columns: repeat(4, 1fr); /* Cố định 4 cột */
+    
+    justify-items: center;
+    align-items: center;
+}
+
+.block_member {
+    background-color: #ffffff; /* Clean white background */
+    padding: 1.5rem; /* Add more padding for content spacing */
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    text-decoration: none; /* Remove underline for links */
+    width: 90%; /* Ensure uniform sizing across devices */
+    max-width: 300px; /* Restrict maximum width */
+}
+
+.block_member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent hover effect */
+}
+
+.block_member img {
+    width: 120px; /* Chiều rộng cố định */
+    height: 120px; /* Chiều cao cố định */
+    border-radius: 50%; /* Ảnh tròn */
+    object-fit: cover; /* Đảm bảo ảnh được cắt vừa khung */
+    border: 3px solid #d9534f; /* Viền ảnh */
+    margin-bottom: 1rem;
+}
+
+.member-info {
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+.member-info h3 {
+    color: #007bff;
+    font-size: 1.5rem; /* Larger heading font */
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.member-info p {
+    color: #555;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    }
+
+    .members h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .member-grid {
+        grid-template-columns: 1fr; /* Stack members in 1 column */
+    }
+
+    .members h2 {
+        font-size: 1.8rem;
+    }
+}
+.header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to right, #42a5f5, #64b5f6);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.title {
+    font-size: 5em; /* Tăng kích thước chữ */
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #ff9d00, /* Ánh sáng vàng */
+        0 0 20px #ff9d00, 
+        0 0 30px #ff6600, /* Ánh sáng cam đậm */
+        0 0 40px #ff3300, /* Ánh sáng đỏ */
+        0 0 70px #ff0000; /* Ánh sáng đỏ đậm hơn */
+    letter-spacing: 5px; /* Giãn chữ để trông nổi bật */
+    animation: glow 2s infinite alternate; /* Hiệu ứng nhấp nháy */
+}
+
+/* Hiệu ứng ánh sáng động */
+@keyframes glow {
+    from {
+        text-shadow: 
+            0 0 10px #ff9d00,
+            0 0 20px #ff6600,
+            0 0 30px #ff3300,
+            0 0 50px #ff0000,
+            0 0 80px #ff6600;
+    }
+    to {
+        text-shadow: 
+            0 0 20px #ff3300,
+            0 0 30px #ff6600,
+            0 0 40px #ff9d00,
+            0 0 60px #ffcc00,
+            0 0 100px #ffee00;
+    }
+}
+
+.group-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slogan {
+    font-size: 1.8em;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.menu {
+    margin: 20px 0;
+}
+
+.btn {
+    background: #293ef6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(41, 182, 246, 0.3);
+}
+
+.btn:hover {
+    background: #0288d1;
+    box-shadow: 0px 8px 20px rgba(41, 182, 246, 0.6);
+    transform: translateY(-3px);
+}
+
+.section {
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.member-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    cursor: pointer;
+}
+
+.member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    border: 3px solid #90caf9;
+}
+
+.member:hover img {
+    transform: scale(1.2);
+}
+
+.activity-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.activity-gallery img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.activity-gallery img:hover {
+    transform: scale(1.1);
+}
+
+.return {
+    margin-top: 20px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #42a5f5;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+main {
+    padding-bottom: 60px; /* Đảm bảo nội dung không bị footer che mất */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  /* Định dạng riêng cho #home1 */
+  #home1 {
+    background: linear-gradient(120deg, #42a5f5, #8fd3f4); /* Gradient xanh pastel nhẹ nhàng */
+    padding: 50px;
+    margin: 60px auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Bóng mờ tinh tế */
+    text-align: center;
+    color: #ffffff; /* Chữ màu trắng */
+  }
+
+  #home1 h2 {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+  }
+
+  #home1 p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+    color: #000000;
+  }
+
+  #home1 p:last-child {
+    font-weight: 600;
+    font-size: 1.4em;
+    color: #000000; /* Màu vàng nhạt cho đoạn cuối */
+  }
+
+  /* Hiệu ứng hover */
+  #home1:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+   /* Nút trở lại trang chủ */
+   .back-home {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #293ef6; /* Màu tím đẹp */
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-home:hover {
+      background-color: #4891f0;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .back-home:active {
+      background-color: #61a0f1;
+      transform: translateY(2px);
+    }
+    .back-home-container {
+     /* Canh giữa nội dung */
+    margin-top: 20px; /* Tạo khoảng cách với phần nav phía trên */
+}
+   
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">✨ GROUP ONE 12A1 ✨</h1>
+        
+      
+
+        <p class="slogan">"Đoàn kết - Sáng tạo - Thành công"</p>
+        <nav class="menu">
+            <a href="/index.html" class="btn back-home">Trở lại trang chủ 12A1</a>
+            <button class="btn" onclick="showSection('home')">Trang Chủ</button>
+            <button class="btn" onclick="showSection('members')">Thành Viên Nhóm</button>
+            <button class="btn" onclick="showSection('activities')">Hoạt Động Nhóm</button>
+            
+        </nav>
+        <!-- <div class="back-home-container">
+            <a href="/index.html" class="back-home">Trở lại trang chủ 12A1</a>
+        </div> -->
+
+    </header>
+    <main>
+
+
+        <!-- Trang chủ -->
+    <section id="home" class="section">
+        <section id="home1" class="section1">
+            <h2>Chào mừng đến với GROUP ONE !</h2>
+            <p>Một tập thể với những cá nhân đầy nhiệt huyết và tận tình giúp đỡ lẫn nhau vượt qua mỗi khó khăn trong học tập. Nhóm chúng tôi gồm có 12 thành viên với mỗi người một cá tính góp phần tạo nên một tập thể hài hòa và đoàn kết với nhau.</p>
+            <p>Chúng tôi tin rằng, với sự đoàn kết hòa hợp  và tinh thần làm việc nhóm sôi nổi, tập thể GROUP ONE sẽ đạt được những thành công lớn trong học tập cũng như các phong trào của lớp của trường.</p>
+            <p>Tập thể GROUP ONE xin quyết tâm cùng nhau chạm bước vào ngưỡng cửa đại học và thành công trên bước đường ước mơ mà mình chọn. Cùng nhau hứa hẹn cho một tương lai tươi đẹp của chúng ta.</p>
+        </section>
+
+    </section>
+        <!-- Thành viên nhóm -->
+        <section id="members" class="section hidden">
+            <section class="members">
+                <h2>Danh sách thành viên</h2>
+                <div class="member-grid">
+                    <!-- Member 1 -->
+                    <a href="Ngyễn Thị Tố Như.html" class="block_member">
+                        <img src="https://i.postimg.cc/sD0c26ck/IMG-20241201-113635.jpg" alt="Nguyễn Thị Tố Như">
+                        <div class="member-info">
+                            <h3>Nguyễn Thị Tố Như</h3>
+                            <p>Vai trò: Tổ trưởng</p>
+                        </div>
+                    </a>
+                    <!-- Member 2 -->
+                    <a href="Ngô Quốc Đạt.html" class="block_member">
+                        <img src="https://i.postimg.cc/75szKfWs/ttn-image-2024-02-21-181739988.webp" alt="Ngô Quốc Đạt">
+                        <div class="member-info">
+                            <h3>Ngô Quốc Đạt</h3>
+                            <p>Vai trò: Thủ quỹ</p>
+                        </div>
+                    </a>
+                    <!-- Member 3 -->
+                    <a href="Võ Khiết Băng.html" class="block_member">
+                        <img src="https://i.postimg.cc/2ygR54Cm/IMG-20241205-184053.jpg" alt="Võ Khiết Băng">
+                        <div class="member-info">
+                            <h3>Võ Khiết Băng</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 4 -->
+                    <a href="Lưu Huỳnh Anh Thư.html" class="block_member">
+                        <img src="https://i.postimg.cc/26j3GGxz/IMG-1631.jpg" alt="Lưu Huỳnh Anh Thư">
+                        <div class="member-info">
+                            <h3>Lưu Huỳnh Anh Thư</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 5 -->
+                    <a href="Trương Thị Ngọc Hân.html" class="block_member">
+                        <img src="https://i.postimg.cc/W3ysfPjN/IMG-20241204-095620.jpg" alt="Nguyễn Thị Ngọc Hân">
+                        <div class="member-info">
+                            <h3>Nguyễn Thị Ngọc Hân</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 6 -->
+                    <a href="Phạm Lê Minh Thư.html" class="block_member">
+                        <img src="https://i.postimg.cc/PrqFH2vw/retouch-2023092900001379.jpg" alt="Phạm Lê Minh Thư">
+                        <div class="member-info">
+                            <h3>Phạm Lê Minh Thư</h3>
+                            <p>Vai trò: Thư Ký</p>
+                        </div>
+                    </a>
+                    <!-- Member 7 -->
+                    <a href="Hồ Tâm Như.html" class="block_member">
+                        <img src="https://i.postimg.cc/vx48HZzB/IMG-20241205-193939.jpg" alt="Hồ Tâm Như">
+                        <div class="member-info">
+                            <h3>Hồ Tâm Như</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 8 -->
+                    <a href="Trương Khánh Bình.html" class="block_member">
+                        <img src="https://i.postimg.cc/rFctQhvL/IMG-20240701-184233.jpg" alt="Trương Khánh Bình">
+                        <div class="member-info">
+                            <h3>Trương Khánh Bình</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 9 -->
+                    <a href="Lê Trường Nguyên.html" class="block_member">
+                        <img src="https://i.postimg.cc/YLk5gRF9/IMG-1732859659954-1733281580497.jpg" alt="Lê Trường Nguyên">
+                        <div class="member-info">
+                            <h3>Lê Trường Nguyên</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 10 -->
+                    <a href="Lâm Tấn Thuận.html" class="block_member">
+                        <img src="https://i.postimg.cc/PLM5ScJt/IMG-20241205-192432.jpg" alt="Lâm Tấn Thuận">
+                        <div class="member-info">
+                            <h3>Lâm Tấn Thuận</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 11 -->
+                    <a href="Nguyễn Trường Thịnh.html" class="block_member">
+                        <img src="https://i.postimg.cc/NyQZ4Q0p/IMG-4340.jpg" alt="Nguyễn Trường Thịnh">
+                        <div class="member-info">
+                            <h3>Nguyễn Trường Thịnh</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                    <!-- Member 12 -->
+                    <a href="Nguyễn  Mai Quỳnh.html" class="block_member">
+                        <img src="https://i.postimg.cc/bNtCd9hT/IMG-20241204-102823.jpg" alt="Nguyễn Mai Quỳnh">
+                        <div class="member-info">
+                            <h3>Nguyễn Mai Quỳnh</h3>
+                            <p>Vai trò: Thành viên</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <button class="btn return" onclick="showSection('home')">🔙 Trở về Trang Chủ</button>
+        </section>
+        
+       <!-- Hoạt động nhóm -->
+<!-- Hoạt động nhóm -->
+<section id="activities" class="section hidden">
+    <h2>Hoạt Động Nhóm</h2>
+    <div class="activity-gallery">
+        <figure>
+            <img src="https://i.postimg.cc/N0WCXCWC/Screenshot-20241220-070006-Editor-Lite.jpg" alt="Hoạt động 1">
+            <figcaption> Hoạt động cắm trại</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/QdP31zg4/IMG-7668.jpg " alt="Hoạt động 2">
+            <figcaption> Hổn chiến Ngọc Hân - Quốc Đạt</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/JhkWqQP1/IMG-7669.jpg" alt="Hoạt động 3">
+            <figcaption>Tổng Kết 10A1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/HnpDT1Hx/IMG-7670.jpg" alt="Hoạt động 4">
+            <figcaption>Tổng Kết 10A1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/mD3Wx2vJ/IMG-7671.jpg" alt="Hoạt động 5">
+            <figcaption>Bóng hồng Tổ 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/vBMRt2BT/quality-restoration-20241217222633158.jpg" alt="Hoạt động 6">
+            <figcaption> Ảnh tổ đi chùa ÔChum</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/nLtZnN1W/IMG-20240526-102938.jpg" alt="Hoạt động 7">
+            <figcaption> Cắm trại</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/8CrFY8zn/IMG-20241227-104933.jpg" alt="Hoạt động 7">
+            <figcaption> Cắm trại</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/D05mGnxm/IMG-20241227-104945.jpg" alt="Hoạt động 7">
+            <figcaption> Cắm trại</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/9MdDWGTd/IMG-20241227-104930.jpg" alt="Hoạt động 8">
+            <figcaption>Hoạt động nhóm GDKTPL ở quán trà sữa </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/G2wBwMB3/IMG-20241227-104928.jpg " alt="Hoạt động 8">
+            <figcaption>Off team bên bà Trang </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/1XcPp5Bw/IMG-20241117-105833.jpg" alt="Hoạt động 8">
+            <figcaption> Đi quay môn Văn nè</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/ZqkYCWJV/IMG-20241117-085744.jpg" alt="Hoạt động 8">
+            <figcaption> Che nắng cho Cameraman </figcaption>
+        </figure>
+    
+        <figure>
+            <img src="https://i.postimg.cc/Vv7L64NC/IMG-20241117-094731.jpg" alt="Hoạt động 8">
+            <figcaption> Quay lại có hơn chục lần </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/JzSc6CLG/IMG-20241227-115826.jpg" alt="Hoạt động 8">
+            <figcaption> Quay môn Văn </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/2881DL5W/IMG-20241227-104926.jpg" alt="Hoạt động 8">
+            <figcaption>Thể dục thể thao sức khỏe dồi dào </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/BZ7w2660/IMG-20241227-121110.jpg" alt="Hoạt động 8">
+            <figcaption> Chỗ học mới của Gr 1  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/3NqShL6R/IMG-20241227-121129.jpg" alt="Hoạt động 8">
+            <figcaption> Học và học  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/PJMtCHtJ/IMG-20241227-113304.jpg" alt="Hoạt động 8">
+            <figcaption> Học cùng KB  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/fygDZLH7/IMG-20240417-204509.jpg" alt="Hoạt động 8">
+            <figcaption> Ngồi học là quá bền thường  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/cCJ0VYc4/IMG-20240417-204517.jpg" alt="Hoạt động 8">
+            <figcaption> Tịnh tâm, tịnh tâm  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/9QDz43ZF/IMG-20241227-104911.jpg" alt="Hoạt động 8">
+            <figcaption> Các bạn cùng nhau ôn tập trước kì thi  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/2Sgf8y4T/IMG-20241227-113635.jpg" alt="Hoạt động 8">
+            <figcaption> Nói nhìu chiện là dận </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/J0tCT81s/IMG-20240417-164317.jpg" alt="Hoạt động 8">
+            <figcaption> Hong có nhìu chiện xíu nào luôn </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/4xkjcVh7/IMG-20230923-102951.jpg" alt="Hoạt động 8">
+            <figcaption> Tâm sự mọi lúc, mọi nơi </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/N0TM41d3/IMG-20241205-102911.jpg" alt="Hoạt động 8">
+            <figcaption> Hóng chiện </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/qvsSxq8m/IMG-20231011-094744.jpg" alt="Hoạt động 8">
+            <figcaption> Làm bài tập nhúm đò đoá </figcaption>
+        </figure>
+        
+        <figure>
+            <img src="https://i.postimg.cc/sfWWsjLc/IMG-20241220-103121.jpg" alt="Hoạt động 8">
+            <figcaption> Một tuần học quá mệt mõi của Gr1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/x1X22Mbc/IMG-20241227-113643.jpg" alt="Hoạt động 8">
+            <figcaption> De được ngủ rùi </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/cCjy2zHX/IMG-20240416-144104.jpg" alt="Hoạt động 8">
+            <figcaption> Phòng Đoàn cũng ngủ được.kkk </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/k5bhzYSg/IMG-20241227-143429.jpg" alt="Hoạt động 8">
+            <figcaption> Câu chiện trực lớp ko hồi kết.kkk  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/52yx2DD9/IMG-20241227-113332.jpg" alt="Hoạt động 8">
+            <figcaption> Lao động là vinh quang </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/MKd6xzPr/IMG-20241227-113335.jpg" alt="Hoạt động 8">
+            <figcaption> Lau bảng cái đã.kkk </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/TPWfrgRZ/IMG-20241227-113342.jpg" alt="Hoạt động 8">
+            <figcaption> Trực lớp cùng Gr 1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/BvVwV9by/IMG-20241227-143115.jpg" alt="Hoạt động 8">
+            <figcaption> Dành chổi ko lợi thì qua lớp kế bên mượn.kkk </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/wvfSRrhg/IMG-20231012-093808.jpg" alt="Hoạt động 8">
+            <figcaption> Pu lau bảng ik, để MQ quạt cho </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/jdJGCZCY/IMG-20231108-131330.jpg" alt="Hoạt động 8">
+            <figcaption> Cách nhanh nhất để lau bảng khi chìu cao.....kkk </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/1zDbmHR5/IMG-20241105-143002.jpg" alt="Hoạt động 8">
+            <figcaption> Trở zề tủi thơ cùng Gr 1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/zB56Vg3w/IMG-20241105-143141.jpg" alt="Hoạt động 8">
+            <figcaption> Nhảy dây nè </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/HkcfKmfM/IMG-20241227-114327.jpg" alt="Hoạt động 8">
+            <figcaption> Bàn tay 5 ngón </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/RZkjx8BD/IMG-20241105-082004.jpg" alt="Hoạt động 8">
+            <figcaption> Lắp Lego hong </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/T13scvVp/Beauty-Plus-20241015103703773-save.jpg" alt="Hoạt động 8">
+            <figcaption> Hổ báo trường mẫu giáo </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/2y0spSkQ/IMG-20241227-113658.jpg" alt="Hoạt động 8">
+            <figcaption> cách để nhớ công thức vật Lý</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/tC7fZyRc/IMG-20240929-122400.jpg" alt="Hoạt động 8">
+            <figcaption> Làm bài môn TIN nè </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/jdkpZ2kK/IMG-20241227-113751.jpg" alt="Hoạt động 8">
+            <figcaption> làm sản phẩm môn Lý </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/0j5yPh9v/IMG-20241204-142351.jpg" alt="Hoạt động 8">
+            <figcaption> Cũng chăm học Tin lắm mà máy tính ko cho phép </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/mZSPJyTR/IMG-20241227-104922.jpg" alt="Hoạt động 8">
+            <figcaption> Chiến thần toán học </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/6pWkhSKs/IMG-20241227-121645.jpg" alt="Hoạt động 8">
+            <figcaption> Học hoá là phụ, hát là chính </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/v8vMLQsH/IMG-20241227-113546.jpg" alt="Hoạt động 8">
+            <figcaption> Chăm học quá </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/022vVLkG/IMG-20241227-113602.jpg" alt="Hoạt động 8">
+            <figcaption> cách vẽ tranh mới </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/KYLhKbfb/IMG-20241227-113622.jpg" alt="Hoạt động 8">
+            <figcaption> trồng cây chuối nè </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/LXpKLWQ1/IMG-20241227-113719.jpg" alt="Hoạt động 8">
+            <figcaption> Ý tưởng kinh doanh - GDKTPL 11a1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/mkLv6HsZ/IMG-20241227-113725.jpg" alt="Hoạt động 8">
+            <figcaption> Linh kiện hoàn thành sản phẩm </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/d1jMB9gS/IMG-20241227-113722.jpg" alt="Hoạt động 8">
+            <figcaption> Quy trình lắp mạch </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/653srncY/IMG-20241227-113730.jpg" alt="Hoạt động 8">
+            <figcaption> Lợi ích của sản phẩm </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/nLZ8yBFb/IMG-20240202-162728.jpg" alt="Hoạt động 8">
+            <figcaption> Chăm chỉ wá </figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://i.postimg.cc/V60f5712/IMG-20241227-104915.jpg" alt="Hoạt động 8">
+            <figcaption> Thành viên tổ 1 trang trí bảng hội trại </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/BZzrqdSC/IMG-20240130-165156.jpg" alt="Hoạt động 8">
+            <figcaption> Chăm wá </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/ZnX2Vy7Q/IMG-20240202-162745.jpg" alt="Hoạt động 8">
+            <figcaption> Quýn bài cái. Trại làm sao.kkk</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/90WXg7rJ/IMG-20240526-104002.jpg" alt="Hoạt động 8">
+            <figcaption> Cổng trại 11A1  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/63V5h058/IMG-20240526-104023.jpg" alt="Hoạt động 8">
+            <figcaption> bảng trại 11A1  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/NfzjvNSh/IMG-20241113-120518.jpg" alt="Hoạt động 8">
+            <figcaption> Trại Xuân 10A1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/qv6MJsHN/IMG-20241113-120447.jpg" alt="Hoạt động 8">
+            <figcaption> Tập thể 10A1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/XJs0cq0M/IMG-20240317-205922.jpg" alt="Hoạt động 8">
+            <figcaption> Tổng Kết cuối năm 10A1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/nVvx59LK/IMG-20241227-104951.jpg" alt="Hoạt động 8">
+            <figcaption> Ngày Tổng Kết của tập thể 11A1  </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/Gh7Hh3B5/IMG-20241227-104913.jpg" alt="Hoạt động 8">
+            <figcaption> Gr 1 - Tổng kết 11A1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/fbxzXMLZ/IMG-20241109-174924.jpg" alt="Hoạt động 8">
+            <figcaption> Gr 1 - Tổng kết 11A1 </figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.postimg.cc/ZKR5gkfF/IMG-20241115-222158.jpg" alt="Hoạt động 8">
+            <figcaption> 20/11 - Tập thể 12A1 </figcaption>
+        </figure>
+
+
+    </div>
+    <button class="btn return" onclick="showSection('home')">🔙 Trở về Trang Chủ</button>
+</section>
+
+
+
+    </main>
+    
+    <footer class="footer">
+       <strong> <p>✨ © 2024 GROUP ONE 12A1 - CẢM ƠN VÌ ĐÃ LÀ THANH XUÂN CỦA NHAU. ✨</p> </strong>
+    </footer>
+</body>
+<script>
+    // script.js
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.add('hidden');
+    });
+    document.getElementById(sectionId).classList.remove('hidden');
+}
+
+function showDiary(name) {
+    alert(`Nhật ký của ${name} đang được cập nhật!`);
+}
+</script>
+</html>

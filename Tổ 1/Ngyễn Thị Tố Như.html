@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <title> Nguyễn Thị Tố Như</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #d7ebfe;         /*nền phải*/
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .left,
+    .right {
+      padding: 20px;
+    }
+
+    .left {
+      width: 35%;
+      background-color: #d0e6ff;    /*nền phải*/
+      border-right: 1px solid #9fcaf5;
+      text-align: center;
+    }
+
+    .right {
+      width: 65%;
+    }
+
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #e1ccd4;
+    }
+
+    .profile h1 {
+        font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      color: #ef7f89; /*Chữ Sơn Ánh Tuyết*/
+      text-shadow: -0.15px -0.15px 0 #ef7f89, 
+      0.15px -0.15px 0 #fa135c, 
+      -0.15px 0.15px 0 #fa135c, 
+      0.15px 0.15px 0 #fa135c;
+      margin: 0.25;
+    }
+
+    .profile p {
+      color: #a74049;
+      margin: 10px 0.1em;
+    }
+
+    .timeline h2 {
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+      color: #ef7f89; 
+      text-shadow: -1px -1px 0 #ef7f89, 
+      1px -1px 0 #fa135c, 
+      -1px 1px 0 #fa135c, 
+      1px 1px 0 #fa135c;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 4em;
+    }
+
+    .event {
+      border-left: 4px solid #c84e58;
+      padding-left: 20px;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 10px;
+      width: 14px;
+      height: 14px;
+      background-color: #c84e58;
+      border-radius: 50%;
+    }
+
+    .event h3 {
+      font-size: 1.5em;
+      color: #e46872;
+      margin: 0;
+    }
+
+    .event li {
+      color: #a74049;
+      margin: 5px 0;
+    }
+    #lop10{
+        color: #2084e2;
+    }
+    #lop11{
+        color: red;
+    }
+    #lop12{
+        color: #5a20e2;
+    }
+        /* Nút trở lại trang chủ */
+        .back-home {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #559dd8; /* Màu tím đẹp */
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-home:hover {
+      background-color: #4891f0;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .back-home:active {
+      background-color: #61a0f1;
+      transform: translateY(2px);
+    }
+
+    /* Canh chỉnh nút dưới cùng */
+    .back-home-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Bên trái: Thông tin cá nhân -->
+    <div class="left">
+      <div class="profile">
+        <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/sD0c26ck/IMG-20241201-113635.jpg' border='0' alt='IMG-20241201-113635'/></a>   
+        <h1> Nguyễn Thị Tố Như</h1>
+        <p><i>Ngày sinh:</i> 10/02/2007 </p>
+        <p><i>Email:</i> nguyenthitonhu100207.st@gmail.com</p>
+        <p><i>Điện thoại:</i> 0343224208</p>
+        <p><i>Địa chỉ:</i> Khóm 7, Phường 1, thị xã Ngã Năm, tỉnh Sóc Trăng</p>
+      </div>
+    </div>
+
+    <!-- Bên phải: Các sự kiện quan trọng -->
+    <div class="right">
+      <div class="timeline">
+        <h2> Nhật Ký</h2>
+
+        <div class="event">
+          <h3 id="lop10">Lớp 10 (Năm học 2022-2023)</h3>
+          <ul>
+            <li>Đậu tuyển sinh 10 vào trường <Strong>THPT Mai Thanh Thế</strong> với 41.15 điểm.</li>
+            <li>Đậu nguyện vọng 1 vào tổ hợp 1 lớp <strong>10A1</strong>.</li>
+            <li> Giáo viên chủ nhiệm là thầy <strong> Trần Hà Duy </strong></li>
+            <li>Là <strong> Tổ Trưởng </strong> Tổ 1</li>
+            <li> Tham gia Đội Tuyển <strong> HSG Vật Lý </strong></li>
+            <li> Đạt giải  <strong> Nhất </strong> Kỳ thi KHKT cấp Trường</li>
+            <li> Sản phẩm KHKT được  <strong> Đánh giá cao cấp Tỉnh</strong></li>
+          </ul>
+         
+        </div>
+
+        <div class="event">
+          <h3 id="lop11">Lớp 11 (Năm học 2023-2024)</h3>
+          <ul>
+            <li> Giáo viên chủ nhiệm là thầy <strong> Nguyễn Hải Âu </strong></li>
+            <li>Tiếp tục là thành viên của <strong>Tổ 1 lớp 11A1</strong>.</li>
+            <li>Tiếp tục là <strong> Tổ Trưởng </strong> Tổ 1</li>
+            <li>Đạt giải <strong>Khuyến Khích</strong> cuộc thi HSG Vật Lý cấp Tỉnh.</li>
+            <li>Đạt giải <strong>Nhì</strong> Kỳ thi KHKT vòng Trường</li>
+            <li>Đạt giải<strong> Ba </strong> Kỳ thi STTTTNĐ cấp Thị Xã</li>
+          </ul>
+        </div>
+
+        <div class="event">
+          <h3 id="lop12">Lớp 12 (Năm học 2024-2025)</h3>
+          <ul>
+            <li> Giáo viên chủ nhiệm tiếp tục là thầy <strong> Nguyễn Hải Âu </strong></li>
+            <li>Tiếp tục là thành viên của <strong>Tổ 1 lớp 12A1</strong>.</li>
+            <li>Tiếp tục là <strong> Tổ Trưởng </strong> Tổ 1</li>
+            <li>Đạt giải<strong> Khuyến Khích </strong> Kỳ thi HSG giải Toán bằng MTCT cấp Tỉnh</li>
+            <li>Xác định được ngành học và ngôi trường Đại học mơ ước.</li>
+            <li>Mục tiêu đỗ nguyện vọng 1 trong kì Tốt nghiệp THPT Quốc gia 2025</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Nút Trở lại trang chủ -->
+<div class="back-home-container">
+  <a href="GR1.html" class="back-home">Trở lại trang chủ</a>
+
+</body>
+</html>
