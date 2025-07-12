@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -7,6 +7,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <title>Nguyễn Trường Sơn</title>
   <style>
+            .back-home {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #5efe41; 
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-home:hover {
+      background-color: #5efe41;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .back-home:active {
+      background-color: #5efe41;
+      transform: translateY(2px);
+    }
+
+    .back-home-container {
+      text-align: center;
+      margin-top: 20px;
+    }
     body {
       font-family: 'Times New Roman', Times, serif;
       margin: 0;
@@ -18,27 +47,25 @@
       display: flex;
       max-width: 1000px;
       margin: 20px auto;
-      background-color: #f0f8ff; /* Màu nền của container */
+      background-color: #d7ebfe;         /*nền phải*/
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     }
 
-    .left, .right {
+    .left,
+    .right {
       padding: 20px;
     }
 
-    /* Phần bên trái - Màu nền khác */
     .left {
       width: 35%;
-      background-color: #ffebcd; /* Màu Be nhạt cho phần bên trái */
+      background-color: #d0e6ff;    /*nền phải*/
       border-right: 1px solid #9fcaf5;
       text-align: center;
     }
 
-    /* Phần bên phải - Màu nền khác */
     .right {
       width: 65%;
-      background-color: #e0f7fa; /* Màu Xanh dương nhạt cho phần bên phải */
     }
 
     .profile img {
@@ -51,10 +78,13 @@
     }
 
     .profile h1 {
-      font-family: 'Dancing Script', cursive;
+        font-family: 'Dancing Script', cursive;
       font-size: 2em;
-      color: #ef7f89; /* Chữ Trần Thị Ngọc Chăm */
-      text-shadow: -0.15px -0.15px 0 #ef7f89, 0.15px -0.15px 0 #fa135c, -0.15px 0.15px 0 #fa135c, 0.15px 0.15px 0 #fa135c;
+      color: #ef7f89; /*Chữ Sơn Ánh Tuyết*/
+      text-shadow: -0.15px -0.15px 0 #ef7f89, 
+      0.15px -0.15px 0 #fa135c, 
+      -0.15px 0.15px 0 #fa135c, 
+      0.15px 0.15px 0 #fa135c;
       margin: 0.25;
     }
 
@@ -64,10 +94,13 @@
     }
 
     .timeline h2 {
-      font-family: 'Dancing Script', cursive;
-      font-weight: bold;
-      color: #ef7f89;
-      text-shadow: -1px -1px 0 #ef7f89, 1px -1px 0 #fa135c, -1px 1px 0 #fa135c, 1px 1px 0 #fa135c;
+        font-family: 'Dancing Script', cursive;
+        font-weight: bold;
+      color: #ef7f89; 
+      text-shadow: -1px -1px 0 #ef7f89, 
+      1px -1px 0 #fa135c, 
+      -1px 1px 0 #fa135c, 
+      1px 1px 0 #fa135c;
       text-align: center;
       margin-bottom: 20px;
       font-size: 4em;
@@ -78,7 +111,6 @@
       padding-left: 20px;
       margin: 20px 0;
       position: relative;
-      background-color: #fff3e0; /* Màu nền của từng sự kiện */
     }
 
     .event::before {
@@ -94,52 +126,25 @@
 
     .event h3 {
       font-size: 1.5em;
+      color: #e46872;
       margin: 0;
-    }
-
-    /* Màu chữ cho các tiêu đề lớp */
-    .event .class10 {
-      color: #ff6347; /* Màu đỏ cho lớp 10 */
-    }
-
-    .event .class11 {
-      color: #4682b4; /* Màu xanh dương cho lớp 11 */
-    }
-
-    .event .class12 {
-      color: #32cd32; /* Màu xanh lá cho lớp 12 */
     }
 
     .event li {
       color: #a74049;
       margin: 5px 0;
     }
-
-    /* Responsive design cho các màn hình nhỏ */
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        max-width: 90%;
-      }
-
-      .left, .right {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 
 <body>
-
   <div class="container">
     <!-- Bên trái: Thông tin cá nhân -->
     <div class="left">
       <div class="profile">
-        <a href='https://postimg.cc/k6DG7PH3' target='_blank'>
-          <img src='https://i.postimg.cc/Jn5kc1cn/Nguy-n-Tr-ng-S-n.jpg' alt='Nguyễn Trường Sơn'/>
-        </a>
+        <a href='https://postimg.cc/c6QPScd4' target='_blank'><img src='https://i.postimg.cc/kMZCWjZ8/Nguy-n-Tr-ng-S-n.jpg' border='0' alt='Ảnh cá nhân'/></a>
         <h1>Nguyễn Trường Sơn</h1>
-        <p><i>Ngày sinh:</i> 21/7/2007</p>
+        <p><i>Ngày sinh:</i> 21/07/2007</p>
         <p><i>Email:</i> nguyentruongson2107@gmail.com</p>
         <p><i>Điện thoại:</i> 0862838501</p>
         <p><i>Địa chỉ:</i> TDP Hải Yên - Trù Hựu - Thị xã Chũ - Bắc Giang</p>
@@ -149,37 +154,40 @@
     <!-- Bên phải: Các sự kiện quan trọng -->
     <div class="right">
       <div class="timeline">
-        <h2>Chuyên án</h2>
+        <h2>Chiến tích</h2>
 
         <div class="event">
-          <h3 class="class10">Đánh giá chung</h3>
+          <h3 style="color:blue">Đánh giá chung</h3>
           <ul>
-           <li>	Nếu như Phùng Khánh Linh bị bò dí thì Nguyễn Trường Sơn bị cô Linh dí (do mãi không cắt tóc)</li>
-            <li>“ m thì biết cái *** gì? “ (mở mồm ra là đòi quan hệ)</li>
-            <li>Sức hút thì yếu hơn thằng Nguyên một tí, nhưng mà hút vẫn mạnh</li>
-            <li>Trốn học như cơm bữa, nội quy học sinh được tạo ra chỉ để cho nó phá</li>
+            <li style="color:blue">“ m thì biết cái *** gì? “ (mở mồm ra là đòi quan hệ)</li>
+            <li style="color:blue">Sức hút thì yếu hơn thằng Nguyên một tí, nhưng mà hút vẫn mạnh)</li>
+            <li style="color:blue">Chưa có con game nào mà Sơn chưa từng thử</li>
+            <li style="color:blue">Trốn học như cơm bữa, nội quy học sinh được tạo ra chỉ để cho nó phá</li>
+            <li style="color:blue">Không biết sợ, ra đời chỉ sợ mỗi mấy thằng liều như nó</li>
+            
+          </ul>
+         
+        </div>
+
+        <div class="event">
+          <h3 style="color:red">Rate</h3>
+          <ul>
+            <li style="color:red">Red bull/10</li>
           </ul>
         </div>
 
         <div class="event">
-          <h3 class="class11">Chấm điểm</h3>
+          <h3 style="color: #8b499c">Cảnh Báo</h3>
           <ul>
-            <li>Redbull/10000</li>
-          </ul>
-        </div>
+            <li style="color: #8b499c">Đừng bao giờ thách thức Sơn Nguyễn</li>
 
-        <div class="event">
-          <h3 class="class12">Kiến nghị</h3>
-          <ul>
-           <li> Đừng bao giò thách thức Sơn Nguyễn</li>
           </ul>
         </div>
       </div>
-<p><a href="code tổ 4.html">Trở lại trang chủ</a></p>
-
     </div>
   </div>
-
+  <div class="back-home-container">
+    <a href="to2/webtong.html" class="back-home">Quay về trang trước</a>
 </body>
 
 </html>
